@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <style>
+
+/* Reset styles for body and all elements */
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page 1 styles */
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://media.istockphoto.com/id/154368811/photo/cnc-milling-at-work.jpg?s=612x612&w=0&k=20&c=xCnOLXeG77dPEXuz_SaqGv3IC57Wffdx2yxuSCc2O8s=);
+  background-color: rgba(0, 1, 0, 0.6);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Product image styling */
+.product > img {
+  height: 300px !important;
+  width: 100%;
+}
+
+.product2 > img {
+  object-fit: cover;
+}
+
+/* General placement styles */
+.placement {
+  color: #d6d6d6;
+  min-width: 80vw;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  background-color: initial;
+}
+
+/* Description paragraph styles */
+.desc p {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  background-color: initial;
+}
+
+/* Description heading styles */
+.desc h1 {
+  font-size: 6rem;
+  background-color: transparent;
+}
+
+/* Icons container styles */
+main .icons {
+  display: flex;
+  font-size: 4em;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 4em;
+}
+
+/* Icon styles */
+.icons > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 6em;
+  padding: 10px;
+}
+
+/* Icon text styles */
+i p {
+  padding: 10px;
+  padding-left: 10%;
+  font-family: 'poppins', Courier, monospace;
+  font-size: 0.3em;
+}
+
+/* Product heading styles */
+#prdct {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  margin: 20px;
+}
+
+/* Products grid container styles */
+.products {
+  padding: 10px;
+  gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* Product image styles */
+.product > img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* Product container styles */
+.product {
+  padding: 5px;
+  background-color: rgb(226, 218, 218);
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* Product name styles */
+.product > h3 {
+  color: forestgreen;
+}
+
+/* Why choose us section styles */
+.why-choose-us {
+  background-color: rgba(0, 1, 0, 0.6);
+  background-blend-mode: multiply;
+  color: rgb(194, 188, 188);
+  background-image: url(https://lh3.googleusercontent.com/drive-viewer/AK7aPaDFK8cr_r1ZZ1Dl5sXdJOCf3KC5dtU7PG8BHZIsgHIcu23WpmjslJlDo-vrn-oTKsuRKwwwL2j4HBInV46ZTW2rqG6btg=s1600);
+  background-size: cover;
+  padding: 30px;
+  min-height: 40vh;
+}
+
+/* Why choose us heading styles */
+.why-choose-us > h3 {
+  line-height: 1.3;
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+}
+
+/* Why choose us paragraph styles */
+.why-choose-us > p {
+  font-size: 1.6em;
+  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Request catalog section styles */
+.request-catalog {
+  background-color: rgb(194, 188, 188);
+  font-family: 'Titillium Web', sans-serif;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Button styles */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(99, 96, 96);
+  color: rgb(194, 188, 188);
+  border: none;
+  transition: transform 0.5s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Button hover effect styles */
+button:hover {
+  background-color: forestgreen;
+  transform: scale(1.1);
+}
+
+/* Last section styles */
+.last {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 20px;
+  height: max-content;
+  background-color: rgb(194, 188, 188);
+}
+
+/* Connections container styles */
+.connections {
+  font-family: Poppins;
+  min-width: 40%;
+  min-height: 100%;
+}
+
+/* Connections heading styles */
+.connections h3 {
+  line-height: 1.2;
+  padding: 15px;
+  font-size: 3em;
+}
+
+/* Connections paragraph styles */
+.connections p {
+  line-height: 1.2;
+  padding: 15px;
+  font-size: 2em;
+}
+
+/* Connections icon styles */
+.connections i {
+  padding: 10px;
+  font-size: 3em;
+}
+
+/* Address section styles */
+.address {
+  min-height: 30%;
+}
+
+/* Address heading styles */
+.address > h3 {
+  font-size: 50px;
+}
+
+/* Address paragraph styles */
+.address > p {
+  font-size: 20px;
+}
+
+/* Media query for screens smaller than 768px (e.g., mobile) */
+@media (max-width: 767px) {
+
+  .desc h1 {
+    font-size: 3rem;
+  }
+  .desc p {
+    padding: 3px;
+    font-size: 1.4rem;
+  }
+  main .icons {
+    font-size: 2.2em;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icons > i {
+    width: 7em;
+    padding: 5px;
+    margin: 10px;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .product {
+    padding: 2px;
+  }
+  .product h3 {
+    font-size: 1.2rem;
+  }
+  .why-choose-us > h3 {
+    font-size: 1.6rem;
+  }
+  .why-choose-us > p {
+    font-size: 1rem;
+  }
+  .request-catalog h2,
+  .request-catalog p {
+    font-size: 1.5rem;
+  }
+  .last {
+    flex-direction: column;
+  }
+  .connections {
+    margin-bottom: 50px;
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+  .connections h3 {
+    line-height: 1;
+  }
+  .contact-icons {
+    display: inline-block;
+    text-align: center;
+  }
+  .address h3 {
+    font-size: 2rem;
+  }
+  .address p {
+    font-size: 1rem;
+  }
+}
+
+/* Media query for tablets (e.g., screens between 768px and 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .desc h1 {
+    font-size: 8rem;
+  }
+  .desc p {
+    padding: 3px;
+    font-size: 2.4rem;
+  }
+  main .icons {
+    font-size: 3em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .icons > i {
+    width: 4em;
+    padding: 5px;
+    margin: 10px;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product {
+    padding: 2px;
+  }
+  .product h3 {
+    font-size: 1.8rem;
+  }
+  .why-choose-us > h3 {
+    font-size: 2.8rem;
+  }
+  .why-choose-us > p {
+    font-size: 1.6rem;
+  }
+  .request-catalog h2,
+  .request-catalog p {
+    font-size: 1.8rem;
+  }
+  .last {
+    flex-direction: row-reverse;
+  }
+  .connections {
+    margin-bottom: 50px;
+    font-size: 0.7rem;
+  }
+  .connections h3 {
+    display: none !important;
+  }
+  .contact-icons {
+    display: inline-block;
+    text-align: center;
+  }
+  .address h3 {
+    font-size: 2rem;
+  }
+  .address p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+            </style>
+    <script
+      src="https://kit.fontawesome.com/ebe180da63.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel = "icon" href = 
+"https://img.favpng.com/2/13/8/globe-earth-world-holding-hands-png-favpng-VWagXBrZpk8QcKuhHsWQ1FCcX.jpg"            type = "image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo&family=Barlow+Condensed:wght@100&family=Bebas+Neue&family=Cinzel+Decorative&family=Cinzel:wght@500&family=Dancing+Script:wght@600&family=Exo+2&family=Explora&family=Josefin+Sans:ital,wght@1,300&family=Lato&family=Lora:ital@1&family=Major+Mono+Display&family=Oswald&family=Playfair+Display+SC&family=Poppins:wght@300&family=Quicksand:wght@600&family=Raleway&family=Roboto+Condensed&family=Roboto+Slab:wght@300&family=Tilt+Prism&family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PSG Impex: Your Partner for Precision CNC and VMC Cutting Solutions in Chennai. 25+ years of expertise, innovative technology, and quality assurance.">
+
+    <meta name="author" content="PSG Impex" />
+    
+    <meta name="keywords" content="PSG Impex, Tijet, CNC in Chennai, VNC cutting in Chennai, precision CNC machining, CNC fabrication, CNC laser cutting, metal fabrication services, Chennai cutting solutions, CNC cutting technology, metalworking, CNC plasma cutting, CNC waterjet cutting, Chennai CNC services, quality assurance, precision engineering, Tijet services, VNC Cutting services, Chennai metal cutting, CNC service provider, CNC cutting technology, cutting experts, local CNC services, Chennai metal fabrication">
+    
+    <meta name="robots" content="index, follow" />
+    
+    <!-- OpenGraph meta tags for social sharing -->
+    <meta property="og:title" content="PSG Impex - Precision CNC and VMC Cutting Solutions in Chennai" />
+    <meta property="og:description" content="Experience excellence with PSG Impex: Your Partner for Precision CNC and VMC Cutting Solutions in Chennai. 25+ years of expertise, innovative technology, and quality assurance." />
+    <meta property="og:image" content="https://lh3.googleusercontent.com/drive-viewer/AITFw-y76OF_6h8wBgN3Gytq4ikn6owtgOnLtytq54Pnw3_6C9yY-HRJ4UcWFa6nDMum_pjir7MEnUB4M8vzJHO-x0P0GLmtpw=s2560" />
+    <meta property="og:url" content="https://psgimpex.com/" />
+    <meta property="og:type" content="website" />
+    >
+    <title>TIJET - Precision CNC and VMC Cutting Solutions</title>
+  </head>
+  <body>
+    <div class="page1">
+      <div class="placement">
+        <div class="desc">
+          <h1>TIJET</h1>
+          <p>Welcome to  <span style="font-weight: bold;">TIJET</span>, a revolutionary product promoted by <span style="font-weight:bolder;">PSG Impex</span>, merging cutting-edge technology with 25+ years of industry leadership and 200+ successful CNC and VMC projects. Our journey epitomizes innovation and excellence, reflected in our satisfied customer base.</br> With <span style="font-weight: bold;">TIJET</span>, you're not just a client – you're an essential partner in progress. <br> Join us to embrace excellence in motion.</p>
+
+
+<p style="font-family: poppins ; font-style: italic; color: white; margin-top: 70px;">"Your success is our commitment."</p>
+        </div>
+      </div>
+    </div>
+    
+    <main style="background-color: #d6d6d6; color: #333333;">
+      
+      <div class="icons">
+        <i class="fas fa-tools">
+          <p>
+            Experience excellence with our expert tools – precision, quality,
+            and innovation in every detail.
+          </p>
+        </i>
+        <i class="fas fa-cogs">
+          <p>Precision and efficiency through cutting-edge technology.</p>
+        </i>
+        <i class="fas fa-thumbs-up">
+          <p>25+ years, 200+ projects, 100% satisfaction. Your success, assured.</p>
+        </i> 
+      </div>
+      <h2 id = prdct>our products</h2>
+      <div class="products">
+       
+        
+      </div>
+        <section class="why-choose-us">
+          <h3>Why PSG Impex ?</h3>
+          
+          <p>
+            PSG Impex stands out with decades of precision manufacturing
+            expertise, leading-edge CNC cutting technologies, and a track record
+            of excellence with major brands. Our relentless commitment to
+            quality and innovation sets us apart. We take pride in crafting
+            customized solutions for your projects, ensuring your unique needs
+            are met. With our skilled and dedicated team, expect nothing but
+            excellence in every facet of our service.
+          </p>
+      </section>
+      <!-- <section class="request-catalog">
+        <h2>Looking for Our Catalog?</h2>
+        <p>
+          Discover our diverse range of products and services. Grab our digital
+          catalog.
+        </p>
+
+        <a href="/PSG Catalogue.pdf" download>
+          <button><h2>Download PDF</h2></button>
+        </a>
+      </section> -->
+      <div class="last">
+        <div class="connections">
+          <h3>Want to get in Touch ?</h3>
+          <p>Feel Free To Contact us</p>
+
+<div class="contact-icons">
+  <a style="color: #333333;" href="https://wa.me/918838751336"
+  ><i class="fab fa-whatsapp"></i
+></a>
+
+<a style="color: #333333;" href="mailto:psgimpexsales@gmail.com"
+  ><i class="far fa-envelope"></i
+></a>
+
+<a style="color: #333333;" href="tel:+91 8838751336"
+  ><i class="fas fa-phone"></i
+></a>
+</div>
+        </div>
+        <div class="address" style="font-family: poppins;">
+          <h3>PSG IMPEX</h3>
+          <h2>M.R Karthikeyan</h2>
+          <p>No.2/4, Doss 2nd Cross Street,</p>
+          <p>Thundalam, Chennai-600077</p>
+          <p style="color: #333333;">GSTIN : 33FHWPS4947G2ZI
+          </p>
+          <p>
+             
+            <a style="color: #333333;" href="mailto:psgimpexsales@gmail.com">psgimpexsales@gmail.com</a>
+          </p>
+          <p>
+             
+            <a style="color: #333333;" href="tel:+91 8838751336"
+              >+91 88387 51336</a
+            >
+          </p>
+
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    const productsArry = [
+    // Product 1
+    {
+      id: 1,
+      name: "Indexable U Drill",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaD65p6WKEXsT8xI6-rOCoykwNiX7qfDMMZBbGGKJ9r2fnXbAFi4nDln8xumiwWXZvec8ewig4rjlReOvphP4fta_9HDCg=s2560",
+      alt: "udrills"
+    },
+    // Product 2
+    {
+      id: 2,
+      name: "SPMG/SPGT 05/06/07/09/11/14",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCYF21Jh6_5y7KZQc6te6eHLDikx8cwPc_B7J6X-hxHx2k0LhmK6pfrfBCaVlJgCSRi9clyjrG4i4bU7hHG2sHgJJRJsg=s2560",
+      alt: "SPMG /SPGT 05/06/07/09/11/14"
+    },
+    // Product 3
+    {
+      id: 3,
+      name: "Top Clamp Tool Holders",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDwXo6LId6JUcD2qPAmz38_G2ysFmLBnoxHgQlM_48Qe8k6NzVyUvInV1MJ7tbCjKdZHe-MTfZaeXvBjr-YAw9ykGvRCA=s2560",
+      alt: "Tool-Holders"
+    },
+    // Product 4
+    {
+      id: 4,
+      name: "Boring Bars",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDfqxw5i3t3iHuyY00blUxfWHZ3hfdkiHREV4tetPS-XF-YWPjxw5VqDsTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuHaw=s2560",
+      alt: "Boring bars"
+    },
+    // Product 5
+    {
+      id: 5,
+      name: "Indexable End Mill",
+      imageSrc: "https://5.imimg.com/data5/SELLER/Default/2021/9/WG/EQ/UY/7053514/indexable-end-mill-cutters-500x500.jpg",
+      alt: "indexable-end-mill"
+    },
+    // Product 6
+    {
+      id: 6,
+      name: "APMT 1135 / APMT 1604",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaAy9wW68twC2RSBbvTwisAO-jKVOZTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuHF2PuVh87Cm1KJPw-JceBUdSzIxcejg=s2560",
+      alt: "Tungsten Carbide Turning Indexable Insert Apmt 1135 Apmt 1604 Apkt 1604 1003 170516r"
+    },
+    // Product 7
+    {
+      id: 7,
+      name: "Grooving/Parting Insert",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDpvVff_DpgaYNL9TdPuBVYdAUbE9g9xKxelj0nwGCNLMtgqpoQ1Q3lOYmGIBTEq88477CjF8NcequNmLNgdrGJXoOcoA=s2560",
+      alt: "grooving-insert parting-insert"
+    },
+    // Product 8
+    {
+      id: 8,
+      name: "Solid Carbide Drill/End Mill/Reamer/Hole Mill/Form Tools",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDEE0hxUwfwOPPextSb4bzVkRad-sUGvgeNHgjD_GcZCEl2wx2vuFheOauXrPgm09e4dtD0jZHA3tDJhGbz2cZEgl_3=s2560",
+      alt: "Stainless Steel Hss And Solid Carbide Drills End Mills & Reamers"
+    },
+    // Product 9
+    {
+      id: 9,
+      name: "Carbide/PCD/CBN/Cermet Insert",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDbQSW30KTkniclKbB2N26tYCMgcEkeRvSuoe-nnt6Ya9R1BZlHyxG0jCah349hR3KSgd9QjLm1c8cGfal9-pNNH9eGaQ=s2560",
+      alt: "CNC all carbides"
+    },
+    // Product 10
+    {
+      id: 10,
+      name: "Face/Shoulder Milling Cutters",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaB-JdW313A29HvsV4qwL7cDsnaeF2_ro2mZ2fF1J8c-LURHonuKb_x0WJucOUz_gX86OGMzmHOf7KEitfHdPRDayRr3IA=s2560",
+      alt: "Face Shoulder Cutters"
+    },
+    // Product 11
+    {
+      id: 11,
+      name: "Imported Solid Carbide Rods",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBmhsqn-hoYdlDPo392RAl38ME0jOFpj5qwMXnJfcUL0LxLsPWWLwMHUOFJWSqH5W_IaOjL_hus8ZP-WHtNHMp0v4NQ6w=s2560",
+      alt: "solid carbide rods"
+    },
+    // Product 12
+    {
+      id: 12,
+      name: "BT 40 Adaptor",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCXyj2d0P1msMbphZyeuE76mRp4boJzt5PiySby3S-lTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuH06GPJrU1J4gcNwog=s2560",
+      alt: "BT40 Adapters"
+    },
+    // Product 13
+    {
+      id: 13,
+      name: "APMT 1135 PDER",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AITFw-yfyFXV-sJC5ZIiIPfYNxh3tgF7Z8bIB3QM6CLRL4meCtPiOzvxvzE-qgv7vT0Sj3qkvdL_rcAof6ETyMnGkyt_kK1LIQ=s1600",
+      alt: "APMT1135"
+    },
+    // Product 14
+    {
+      id: 14,
+      name: "APMT 1604 PDER",
+      imageSrc: "https://lh3.googleusercontent.com/drive-viewer/AITFw-xfR-Cwt7MZ3Vp_gmDqyrqaoIDoZwL3Uw6oPysdi9-9kH5DVUQegJxDhu4osJqun6zYtO7It_xPa77ODMyd4HiWN74Skw=s1600",
+      alt: "BT40 Adapters"
+    }
+];
+
+  
+  let productClass = document.querySelector(".products"); // Use querySelector instead of querySelectorAll if there's only one container element
+  
+  for (let i = 0; i < productsArry.length; i++) {
+    let productElement = document.createElement("div");
+    productElement.classList.add("product", "product" + (i + 1));
+    let productImages = document.createElement("img");
+    let productName = document.createElement('h3');
+    productName.innerText = productsArry[i].name;
+    productImages.src = productsArry[i].imageSrc; // Set the image source based on your data
+    productImages.alt = productsArry[i].alt; // Set the alt attribute based on your data
+    
+    productClass.appendChild(productElement); // Append the div to the container
+    productElement.appendChild(productImages); // Append the img element to the div
+    productElement.appendChild(productName);
+  
+  }
+  
+  
+  
+
+  </script>
+</html>
